@@ -1,9 +1,3 @@
-# AI For Developer Productivity: Tester Agent
-
-## Overview
-
-In this project, we developed a Tester Agent designed to enhance developer productivity by generating and running unit tests on any Python code. The project includes a script (`tester.py`) for building and testing, as well as fine-tuning the Davinci model to see if it can perform as effectively as GPT-4 when creating unit tests.
-
 # Fine-tuning samples
 
 ## Dataset
@@ -77,12 +71,10 @@ Finetuning parameters:
 https://smith.langchain.com/public/e58b49fc-352a-4e4f-bbf6-4b316b5a7024/r
 
 The content improved it looks like actual tests and the values are correct:
-
 ```python
     def test_factorial_positive_number(self):
         self.assertEqual(factorial(5), 120)
 ```
-
 The gpt4o model used the test just cutting the output of the fine-tuned model, to extract just the test.
 
 It was a lot cheaper, costing only $0.035. Which means it is 14 times cheaper than gpt-4o, and 5 times cheaper than gpt-3.5-turbo. It does not include the fine-tuning cost, but those would be quickly recouped when generating many tests.
